@@ -170,6 +170,35 @@ function initCounterAnimations() {
         });
     }, 100);
 }
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navUl = document.querySelector('.nav-ul');
+const body = document.body;
+
+menuToggle.addEventListener('click', function() {
+    navUl.classList.toggle('show');
+    body.classList.toggle('menu-open');
+    
+    // Change icon between bars and times
+    const icon = this.querySelector('i');
+    if (navUl.classList.contains('show')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-ul a').forEach(link => {
+    link.addEventListener('click', () => {
+        navUl.classList.remove('show');
+        body.classList.remove('menu-open');
+        menuToggle.querySelector('i').classList.remove('fa-times');
+        menuToggle.querySelector('i').classList.add('fa-bars');
+    });
+});
 
 
 

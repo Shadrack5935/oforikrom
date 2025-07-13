@@ -2104,8 +2104,7 @@ footer {
             font-size: 12px;
         }
 
-        /* Responsive Design */
-        /* Responsive Styles */
+/* Responsive Styles */
 @media (max-width: 1200px) {
     .archive-container, 
     .department-container,
