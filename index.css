@@ -1273,58 +1273,365 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 40px 15px 30px;
-            }
+        /* Tablet Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
 
-            .footer-about {
-                order: -1;
-            }
+    .nav-ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
 
-            .social-links {
-                gap: 12px;
-            }
+    .hero-content {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        padding: 2rem;
+    }
 
-            .social-link {
-                width: 40px;
-                height: 40px;
-            }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 
-            .footer-logo {
-                font-size: 1.2rem;
-            }
+    .hero-content p {
+        font-size: 1rem;
+    }
 
-            .ghana-flag {
-                position: relative;
-                top: auto;
-                right: auto;
-                margin: 0 auto 20px;
-            }
-        }
+    .latest-container {
+        padding: 3rem 1.5rem;
+    }
 
-        @media (max-width: 480px) {
-            .footer-grid {
-                padding: 30px 10px 20px;
-            }
+    .latest-container h2 {
+        font-size: 2rem;
+    }
 
-            .footer-links h3.footer-title {
-                font-size: 1.1rem;
-            }
+    .news-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
 
-            .footer-links ul li a {
-                font-size: 0.9rem;
-            }
+    .archivement-container {
+        padding: 3rem 1.5rem;
+    }
 
-            .coat-of-arms {
-                width: 70px;
-                height: 70px;
-            }
+    .archivement-container h2 {
+        font-size: 2rem;
+    }
 
-            .coat-of-arms svg {
-                width: 50px;
-                height: 50px;
-            }
-        }
+    .archive-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .department-container {
+        padding: 30px 20px;
+    }
+
+    .department-container h2 {
+        font-size: 2rem;
+    }
+
+    .departments {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .jobs {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    .job {
+        padding: 40px 20px;
+    }
+
+    .job i {
+        font-size: 3rem;
+    }
+
+    .job h3 {
+        font-size: 2.5rem;
+    }
+
+    .job p {
+        font-size: 1rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 15px 30px;
+    }
+
+    .footer-about {
+        order: -1;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-logo {
+        font-size: 1.2rem;
+    }
+
+    .ghana-flag {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 0 auto 20px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    body {
+        padding: 40px 15px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-ul {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .nav-ul li {
+        width: 100%;
+    }
+
+    .nav-ul a {
+        display: block;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        width: 100%;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logo p {
+        font-size: 1.2rem;
+    }
+
+    .hero-slider {
+        height: 60vh;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 100%;
+        margin: 20px;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .hero-controls {
+        bottom: 15px;
+        gap: 0.5rem;
+    }
+
+    .hero-prev, .hero-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .latest-container {
+        padding: 2rem 1rem;
+    }
+
+    .latest-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .news-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .news {
+        height: auto;
+        min-height: 280px;
+    }
+
+    .news img {
+        height: 180px;
+    }
+
+    .news-content {
+        padding: 1rem;
+        height: auto;
+    }
+
+    .news p {
+        font-size: 0.9rem;
+    }
+
+    .archivement-container {
+        padding: 2rem 1rem;
+    }
+
+    .archivement-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .archive-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .archive {
+        height: auto;
+        min-height: 280px;
+    }
+
+    .archive img {
+        height: 180px;
+    }
+
+    .department-container {
+        padding: 20px 15px;
+    }
+
+    .department-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .departments {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .department {
+        padding: 30px 20px;
+    }
+
+    .department i {
+        font-size: 3rem;
+    }
+
+    .department h3 {
+        font-size: 1.1rem;
+    }
+
+    .jobs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .job {
+        padding: 35px 20px;
+    }
+
+    .job h3 {
+        font-size: 2.2rem;
+    }
+
+    .footer-grid {
+        padding: 30px 10px 20px;
+    }
+
+    .footer-links h3.footer-title {
+        font-size: 1.1rem;
+    }
+
+    .footer-links ul li a {
+        font-size: 0.9rem;
+    }
+
+    .coat-of-arms {
+        width: 70px;
+        height: 70px;
+    }
+
+    .coat-of-arms svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .nav-container {
+        padding: 15px 40px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        left: 8%;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .news-container {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
+
+    .archive-container {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
+
+    .departments {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .jobs {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}

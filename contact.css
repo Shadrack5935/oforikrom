@@ -549,3 +549,186 @@ svg {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(180deg); }
         }
+        /* Responsive Styles */
+@media (max-width: 1200px) {
+    .nav-container,
+    .contact-grid,
+    .dept-grid {
+        max-width: 95%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-hero {
+        padding: var(--space-16) 0 var(--space-12);
+    }
+    
+    .about-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dept-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .nav-ul {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    
+    .nav-ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 15px;
+    }
+    
+    .nav-ul.show {
+        display: flex;
+    }
+    
+    .nav-ul li {
+        width: 100%;
+    }
+    
+    .nav-ul a {
+        display: block;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+    }
+    
+    .about-hero {
+        padding: var(--space-12) 0 var(--space-10);
+    }
+    
+    .about-hero h1 {
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    }
+    
+    .about-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .contact-grid,
+    .dept-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .logo::after {
+        display: none;
+    }
+    
+    .contact-card,
+    .departments,
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .logo p {
+        font-size: 1.1rem;
+    }
+    
+    .about-hero {
+        padding: var(--space-10) 0 var(--space-8);
+    }
+    
+    .about-hero h1 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+    
+    .about-hero p {
+        font-size: 1rem;
+    }
+    
+    .contact-card h3,
+    .departments h3,
+    .contact-form h3 {
+        font-size: 1.5rem;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .dept-item {
+        padding: 15px;
+    }
+}
+
+/* Floating elements animation adjustment for mobile */
+@media (max-width: 768px) {
+    .floating-circle {
+        display: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .container,
+    .menu-toggle {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    .contact-card,
+    .departments,
+    .contact-form {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+}
